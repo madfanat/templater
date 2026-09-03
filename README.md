@@ -1,5 +1,5 @@
 # templater
-__templater__ is a command-line tool for automated placeholder substitution in a template with values from a data file.
+__templater__ is a command-line tool for automated placeholder substitution in a template file with values from a data file.
 
 ### Data file
 * Each non-comment line defines a variable in the form `KEY=VALUE`.
