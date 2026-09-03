@@ -30,9 +30,9 @@ $ templater --template=template.txt --data=data.dat --output=output.txt
 ```
 
 ### Exit statuses
-* 0 -- Success.
-* 1 -- The template contains a placeholder with no corresponding key.
-* 2 -- Invalid command-line arguments.
-* 3 -- I/O error.
-* 4 -- Syntax error.
-* 5 -- Other error.
+* 0 — Success.
+* 1 — The template contains a placeholder with no corresponding key.
+* 2 — Invalid command-line arguments.
+* 3 — I/O error.
+* 4 — Syntax error.
+* 5 — Other error.
