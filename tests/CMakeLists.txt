@@ -25,7 +25,7 @@ target_link_libraries(
 
 target_compile_features(${PROJECT_NAME}_tests PRIVATE cxx_std_23)
 
-add_dependencies(${PROJECT_NAME}_tests generator)
+add_dependencies(${PROJECT_NAME}_tests templater)
 
 include(GoogleTest)
 
