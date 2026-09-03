@@ -1,0 +1,3 @@
+Checking {single} braces
+Of course, there is single key word.
+Anyway, {this is} funny test.

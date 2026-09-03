@@ -1,0 +1,2 @@
+Remember, that keys are {{ SenSiTiVe_to_Case }}, so {{ Name }} and {{ name }} are different keys.
+I also have to say, that {{ NaMe }} and {{ nAME }} are also different keys.

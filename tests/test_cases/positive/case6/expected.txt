@@ -1,0 +1,4 @@
+This is once_time_defined key
+But sometimes key can be defined two_times_defined.
+Or even more, like three_times.
+Remember, that you need only last_one.

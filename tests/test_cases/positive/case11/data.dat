@@ -1,0 +1,15 @@
+name=Vladimir
+number=1st
+difficulty=complex
+just_word=   _     
+    time    = before
+SenSiTiVe_to_Case = sensitive_to_case
+Name = Andrew
+abacaba=this
+// this is the comment
+# whitespaces = blackspaces
+whitespaces = whitespaces
+                type     = strange          
+inside     = _inside_ 
+availability = available
+project_type = utility

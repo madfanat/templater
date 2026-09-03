@@ -1,0 +1,2 @@
+This test is about {{action}}{{what}}{{how}}.
+There can be key words in{{si}}de words with no{{inside}}spaces

@@ -1,0 +1,4 @@
+what = comments
+#comment = this_is_the_comment
+//comment = this_is_also_the_comment
+comment = smth_interesting

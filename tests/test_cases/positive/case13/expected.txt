@@ -1,0 +1,11 @@
+if _ is a key, then
+the key _ has the value _value_
+
+if __ is also a key, then
+the key __ has also the value _value__value_
+
+if ___ is also a key, then
+the key ___ has also the value _value__value__value_
+
+if ____ is also a key, then
+the key ____ has also the value _value__value__value__value_

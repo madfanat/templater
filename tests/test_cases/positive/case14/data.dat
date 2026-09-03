@@ -1,0 +1,30 @@
+pie = balesh
+first_step = Prepare_the_dough_for_the_pie
+second_step = Prepare_the_filling
+third_step = Form_balesh
+fourth_step = Bake_balesh
+
+one = 1
+two = 2
+three = 3
+four = 4
+five = 6
+six = 6
+
+balesh_dough_key = dough
+balesh_flour_key = flour
+balesh_sour_cream_key = sour_cream
+balesh_kefir_key = kefir
+balesh_baking_powder_key = baking_powder
+balesh_butter_key = butter
+balesh_salt_key = salt
+balesh_filling_key = filling
+balesh_beef_key = beef
+balesh_potatoes_key = potatoes
+balesh_onion_key = onion
+balesh_ground_black_pepper_key = ground_black_pepper
+
+
+recipe_key = recipe
+base_key = base
+top_key = top

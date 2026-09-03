@@ -1,0 +1,2 @@
+There can be whitespaces in KV-file.
+Sometimes it can be really funny.

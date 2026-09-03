@@ -1,0 +1,23 @@
+Hello, Vladimir.
+This is the 1st test.
+It is pretty complex.
+Adding _ has never been so useful before
+
+I do can write single braces like {this}. But if I wanna write double, I'll be just sad with no double braces.
+
+Remember, that keys are sensitive_to_case, so Andrew and Vladimir are different keys.
+
+I can also use templates in the way like this 
+and there should not be any whitespaces or line breaks excluding that one after double_braces_right. 
+Oh, let's repeat whitespaces but whithout whitespaces.
+
+
+                Sometimes text 
+        can be
+            really strange formatted.
+    It can             contain key_words_inside_words and it's still available.
+Remember
+    that
+                your utility 
+                            mustn't change 
+                                formatting.

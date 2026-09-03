@@ -1,0 +1,2 @@
+Remember, that keys are sensitive_to_case, so Andrew and Vladimir are different keys.
+I also have to say, that i_dont_know and what_to_write are also different keys.

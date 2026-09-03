@@ -1,0 +1,4 @@
+This is {{ times_defined }} key
+But sometimes key can be defined {{ twice_defined }}.
+Or even more, like {{ three_times_defined }}.
+Remember, that you need only {{ which }}.

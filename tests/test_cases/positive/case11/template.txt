@@ -1,0 +1,23 @@
+Hello, {{ name }}.
+This is the {{ number }} test.
+It is pretty {{ difficulty }}.
+Adding {{       just_word    }} has never been so useful {{ time }}
+
+I do can write single braces like {this}. But if I wanna write double, I'll be just sad with no double braces.
+
+Remember, that keys are {{ SenSiTiVe_to_Case }}, so {{ Name }} and {{ name }} are different keys.
+
+I can also use templates in the way like {{abacaba               }} 
+and there should not be any {{ whitespaces }} or line breaks excluding that one after double_braces_right. 
+Oh, let's repeat {{whitespaces}} but whithout {{ whitespaces}}.
+
+
+                Sometimes text 
+        can be
+            really {{type}} formatted.
+    It can             contain key_words{{inside}}words and it's still {{availability}}.
+Remember
+    that
+                your {{          project_type     }} 
+                            mustn't change 
+                                formatting.

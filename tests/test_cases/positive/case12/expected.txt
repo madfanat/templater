@@ -1,0 +1,12 @@
+1 = one
+(one << 1) | 1 = oneone
+(oneone << 1) | 1 = oneoneone
+(oneoneone << 1) | 1 = oneoneoneone
+(oneoneoneone << 1) | 1 = oneoneoneoneone
+
+oneoneoneoneone >> 1 = oneoneoneone
+oneoneoneone >> 1 = oneoneone
+oneoneone >> 1 = oneone
+oneone >> 1 = one
+
+one = 1

@@ -1,0 +1,11 @@
+if _ is a key, then
+the key _ has the value {{_}}
+
+if __ is also a key, then
+the key __ has also the value {{ __ }}
+
+if ___ is also a key, then
+the key ___ has also the value {{___ }}
+
+if ____ is also a key, then
+the key ____ has also the value {{ ____}}

@@ -1,0 +1,2 @@
+There can be {{ key_word }} in KV-file.
+Sometimes it can be {{ how_much }} funny.

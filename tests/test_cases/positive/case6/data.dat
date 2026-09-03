@@ -1,0 +1,11 @@
+times_defined = once_time_defined
+twice_defined = once_defined
+twice_defined = two_times_defined
+three_times_defined = one
+which = first
+three_times_defined = second
+which = second
+which = third
+which = prelast
+three_times_defined = three_times
+which = last_one
