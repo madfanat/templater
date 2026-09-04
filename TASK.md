@@ -51,7 +51,7 @@
 Все файлы в текстовом формате.
 
 ```
-generator --template=template.txt --data=data.dat --output=output.txt
+templater --template=template.txt --data=data.dat --output=output.txt
 ```
 
 

@@ -1,32 +1,34 @@
 include(FetchContent)
 
 FetchContent_Declare(
-    googletest
-    URL https://github.com/google/googletest/releases/download/v1.16.0/googletest-1.16.0.tar.gz
-    DOWNLOAD_EXTRACT_TIMESTAMP ON
-    FIND_PACKAGE_ARGS NAMES GTest
+  googletest
+  URL https://github.com/google/googletest/releases/download/v1.16.0/googletest-1.16.0.tar.gz
+  FIND_PACKAGE_ARGS NAMES GTest
 )
 
+if(MSVC)
+  set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+endif()
 
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/test_cases/ DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/test_cases/)
 
 add_executable(
-    ${PROJECT_NAME}_tests
-    test_generator.cpp
+    templater_tests
+    tests.cc
 )
 
 target_link_libraries(
-    ${PROJECT_NAME}_tests
-    GTest::gtest_main
+    templater_tests
+    PRIVATE
+        GTest::gtest_main
 )
 
-target_compile_features(${PROJECT_NAME}_tests PRIVATE cxx_std_23)
+target_compile_features(templater_tests PRIVATE cxx_std_23)
 
-add_dependencies(${PROJECT_NAME}_tests templater)
+add_dependencies(templater_tests templater)
 
 include(GoogleTest)
 
-gtest_discover_tests(${PROJECT_NAME}_tests)
+gtest_discover_tests(templater_tests)

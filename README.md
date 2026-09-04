@@ -1,5 +1,18 @@
 # templater
-__templater__ is a command-line tool for automated placeholder substitution in a template file with values from a data file.
+__templater__ is a C++23 command-line tool for automated placeholder substitution in a template file with values from a data file.
+
+
+## Usage
+| Short     | Long              | Required | Description                                    |
+| --------- | ----------------- | -------- | ---------------------------------------------- |
+| `-d PATH` | `--data=PATH`     | Yes      | Path to the data file.                         |
+| `-t PATH` | `--template=PATH` | Yes      | Path to the template file.                     |
+| `-o PATH` | `--output=PATH`   | No       | Path to the output file. Defaults to `stdout`. |
+
+Example:
+```sh
+templater --template=template.txt --data=data.dat --output=output.txt
+```
 
 ### Data file
 * Each non-comment line defines a variable in the form `KEY=VALUE`.
@@ -16,19 +29,6 @@ __templater__ is a command-line tool for automated placeholder substitution in a
 * Placeholder’s value is taken from the data file.
 * Every valid placeholder is replaced with the corresponding `VALUE`.
 
-
-### Usage
-| Short     | Long              | Required | Description                                  |
-|-----------|-------------------|----------|----------------------------------------------|
-| `-d PATH` | `--data=PATH`     | Yes      | Path to the data file.                       |
-| `-t PATH` | `--template=PATH` | Yes      | Path to the template file.                   |
-| `-o PATH` | `--output=PATH`   | No       | Path to the output file. Defaults to `stdout`. |
-
-Example:
-```console
-$ templater --template=template.txt --data=data.dat --output=output.txt
-```
-
 ### Exit statuses
 * 0 — Success.
 * 1 — The template contains a placeholder with no corresponding key.
@@ -36,3 +36,23 @@ $ templater --template=template.txt --data=data.dat --output=output.txt
 * 3 — I/O error.
 * 4 — Syntax error.
 * 5 — Other error.
+
+## Building and testing
+
+Requirements:
+
+- CMake 3.24 or later.
+- A C++23 compiler.
+
+Build the project:
+
+```sh
+cmake -S . -B build
+cmake --build build
+```
+
+Run the tests:
+
+```sh
+ctest --test-dir build --output-on-failure
+```

@@ -1,12 +1,10 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.24)
 
-project(templater VERSION 0.1.0 LANGUAGES CXX)
+project(templater LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-
-enable_testing()
 
 add_executable(
     ${PROJECT_NAME}
@@ -14,4 +12,7 @@ add_executable(
     src/parser.cc
 )
 
-add_subdirectory(tests)
+include(CTest)
+if(BUILD_TESTING)
+  add_subdirectory(tests)
+endif()

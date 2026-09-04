@@ -44,7 +44,7 @@ std::ostream& operator<<(std::ostream& os, const TestCase& test_case) {
 }
 
 
-class GeneratorTest : public ::testing::TestWithParam<TestCase> {
+class TemplaterTest : public ::testing::TestWithParam<TestCase> {
 protected:
     void TearDown() override {
         std::remove("test_output.txt");
@@ -61,8 +61,8 @@ protected:
         return buffer.str();
     }
 
-    int RunGenerator(const std::string& args) {
-        std::string command = (fs::path("..") / ("generator" + std::string(EXECUTABLE_EXTENSION))).string();
+    int RunTemplater(const std::string& args) {
+        std::string command = (fs::path("..") / ("templater" + std::string(EXECUTABLE_EXTENSION))).string();
         command += " " + args;
 
         int result = std::system(command.c_str());
@@ -71,13 +71,13 @@ protected:
     }
 };
 
-TEST_P(GeneratorTest, ProcessTestCase) {
+TEST_P(TemplaterTest, ProcessTestCase) {
     const TestCase& test_case = GetParam();
 
     std::string args = std::format("--template={} --data={} --output=test_output.txt",
                                    test_case.templateFile, test_case.dataFile);
 
-    int result = RunGenerator(args);
+    int result = RunTemplater(args);
 
     if (test_case.isNegativeTest) {
         EXPECT_NE(result, 0) << "Negative test should fail: " << test_case.name;
@@ -131,7 +131,7 @@ std::vector<TestCase> DiscoverTestCases(const std::string& test_type, bool requi
 
 INSTANTIATE_TEST_SUITE_P(
     PositiveTests,
-    GeneratorTest,
+    TemplaterTest,
     ::testing::ValuesIn(DiscoverTestCases("positive", true)),
     [](const ::testing::TestParamInfo<TestCase>& info) {
         std::string test_name = info.param.name;
@@ -142,7 +142,7 @@ INSTANTIATE_TEST_SUITE_P(
 
 INSTANTIATE_TEST_SUITE_P(
     NegativeTests,
-    GeneratorTest,
+    TemplaterTest,
     ::testing::ValuesIn(DiscoverTestCases("negative", false)),
     [](const ::testing::TestParamInfo<TestCase>& info) {
         std::string test_name = info.param.name;
